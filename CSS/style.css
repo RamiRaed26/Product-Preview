@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Fraunces:wght@700&display=swap');
+
+body {
+    margin: 0%;
+    background-color:hsl(30, 38%, 92%) ;
+
+}
+* {
+    box-sizing: border-box;
+}
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+        min-height: 100vh;
+
+}
+.product-card { 
+    background-color: hsl(0, 0%, 100%);
+    width: 100%;
+    max-width: 374px;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.product-image {
+    max-width: 100%;
+}
+.product-image-desktop {
+    display: none;
+}
+@media (min-width: 600px) {
+    .product-card {
+        display: flex;
+        flex-direction: row;
+        max-width: 600px;
+    }
+    .product-image-desktop {
+        display: block;
+        width: 50%;
+        height: 450px;
+        object-fit: cover;
+    }
+    .product-info {
+        width: 50%;
+    }
+    .product-image-mobile {
+    display: none;
+    }
+}
+.product-info {
+    padding: 24px;
+}
+.product-category{
+    margin: 0;
+    color: hsl(228, 12%, 48%); 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing:5px;
+}
+.product-title {
+    margin: 21px 0 0 0;
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 21%, 14%);
+    font-size: 33px;
+    line-height: 1;
+}
+.product-description {
+    margin: 21px 0 0 0 ;
+    color:hsl(228, 12%, 48%) ;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+.price {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.current-price {
+    margin: 21px 0 0 0 ;
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    color: hsl(158, 36%, 37%);
+}
+.old-price {
+    margin: 21px 0 0 0;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration:line-through ;
+    color:hsl(228, 12%, 48%);
+}
+.add-to-cart {
+    margin: 21px 0 0 0 ;
+    background-color:hsl(158, 36%, 37%) ;
+    width: 100%;
+    color: white;
+    border-radius: 8px;
+    border: 0;
+    padding: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+.add-to-cart:hover {
+    background-color: hsl(158, 42%, 18%);
+
+}
+.cart-icon {
+    width: 17px;
+}
+.add-to-cart:focus-visible {
+    outline: 3px solid hsl(158, 42%, 18%);
+    outline-offset: 2px;
+}
